@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres
+    container_name: my-postgres-address
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: mydatabasev2
+    ports:
+      - "5433:5432"
+    volumes:
+      - my-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  my-postgres-data:
